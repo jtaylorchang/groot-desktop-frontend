@@ -15,7 +15,7 @@
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"></script>
+<script data-main="js/bundle.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
 
 <!-- EJS connection -->
 <script type="text/javascript">
@@ -34,11 +34,16 @@
     });
 
     console.log(config);
+
+    require.config({
+        paths: {}
+    });
 </script>
 
 <!-- Client-side React -->
 <script type="text/babel">
-    const Header = ({ name }) => {
+require(["", function(reactapp) {
+const Header = ({ name }) => {
         return (
             <React.Fragment>
                 <p style={styles.greeting}>Hello {name}</p>
@@ -93,6 +98,8 @@
         <App config={config} />,
         document.getElementById('react-mount')
     );
+}])
+    
 </script>
 
 <!-- Fonts -->

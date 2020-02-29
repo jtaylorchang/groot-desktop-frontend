@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run build && nodemon server.js",
     "build": "mkdirp public/css && lessc public/less/main.less > public/css/main.css",
-    "lint": "node_modules/eslint/bin/eslint.js server.js app/controllers/*.js etc/utils.js"
+    "lint": "node_modules/eslint/bin/eslint.js server.js app/controllers/*.js etc/utils.js",
+    "react-build": "webpack --mode development"
   },
   "license": "NCSA",
   "repository": {
@@ -28,10 +29,16 @@
     "nodemailer": "^2.7.0",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "request": "^2.75.0",
     "winston": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-config-google": "^0.6.0",
@@ -40,6 +47,8 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.3.0",
     "less": "^2.7.1",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   }
 }
