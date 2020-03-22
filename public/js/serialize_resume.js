@@ -76,7 +76,7 @@ function send_resume(e) {
     });
     serialized_data["resume"] = resumeBase64String;
     post_resume(serialized_data);
-    // post(serialized_data);
+    post(serialized_data);
 }
 
 // Add events
