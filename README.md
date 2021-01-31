@@ -10,8 +10,11 @@ This is the repo for the frontend/website for groot. It's built desktop first an
 
 ## Feature: Member-To-Meeting Matcher service
 
-![Create View](mmm-create.png)
-![Edit View](mmm-edit.png)
+[2nd Place at HackIllinois 2020! Read our DevPost](https://devpost.com/software/uiuc-acm-member-to-meeting-matcher-service)
+
+![Architecture](readme/mmm-schematic.png)
+![Create View](readme/mmm-create.png)
+![Edit View](readme/mmm-edit.png)
 
 ## Local Set Up
 
